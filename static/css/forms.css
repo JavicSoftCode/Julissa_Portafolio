@@ -1,0 +1,76 @@
+/* Gradiente para el fondo de los formularios */
+.bg-gradient {
+    background: linear-gradient(135deg, #6f42c1, #9b59b6, #d1a3ff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo de animaciones */
+.fade-in-more {
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo de los formularios */
+.card {
+    background: rgba(0, 0, 0, 0.6); /* Fondo transparente con un toque oscuro */
+    border-radius: 15px;
+}
+
+/* Estilo de los botones */
+.btn-primary-gradient {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6, #d1a3ff);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-primary-gradient:hover {
+    background: linear-gradient(135deg, #6f42c1, #8e44ad);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de los campos de formulario */
+.form-group input {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Textos blancos */
+.text-white {
+    color: white !important;
+}
+
+/* Ajuste de espacios en la parte superior */
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.text-center {
+    text-align: center;
+}

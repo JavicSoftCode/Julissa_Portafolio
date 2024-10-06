@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<div class="hero-section">
+    <div class="welcome-content text-center">
+        <div class="text">
+            {% if user.is_authenticated %}
+                <h1 class="fw-bold fade-in">¡Hola, {{ user.username }}!</h1>
+            {% else %}
+                <h1 class="fw-bold fade-in">¡Hola, Soy Julissa Lescano!</h1>
+            {% endif %}
+            <p class="tagline fade-in-delayed">Ingeniera en Software | Desarrollo Web | BackEnd</p>
+            <p class="intro fade-in-more">Bienvenida a mi portafolio personal. Aquí comparto mi pasión por la
+                tecnología, los proyectos que he desarrollado y las soluciones que me encanta crear.</p>
+        </div>
+        <div class="profile-img mt-4 fade-in-more">
+            <img class="img-fluid rounded-circle custom-shadow"
+                 src="{% static 'public/portafolio_Julissa/julissa.jpg' %}" alt="JavicSoftCode" width="150">
+        </div>
+        <a href="https://www.youtube.com/watch?v=RJRN5OxxaAU" class="btn btn-light mt-4 px-4 py-2 fade-in-delayed">Conóceme</a>
+    </div>
+</div>

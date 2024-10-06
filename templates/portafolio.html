@@ -1,0 +1,83 @@
+{% extends 'home.html' %}
+{% block title %} {{ title }} {% endblock title %}
+{% block content %}
+    {% load static %}
+    <div class="container">
+        <header class="row bg-black text-center">
+            <div class="col-md-4 my-auto">
+                <img src="{% static 'public/portafolio_Julissa/julissa.jpg' %}" alt="JSC" class="img-JSC"/>
+            </div>
+            <div class="col-md-4 my-auto">
+                <img src="{% static 'public/portafolio_Julissa/julissa.jpg' %}" alt="JSC" class="img-JSC"/>
+            </div>
+            <div class="col-md-4 my-auto">
+                <img src="{% static 'public/portafolio_Julissa/julissa.jpg' %}" alt="JSC" class="img-JSC"/>
+            </div>
+        </header>
+        <section class="row">
+            <div class="col-md-12">
+                <h1>¡Hola! Soy Julissa</h1>
+                <p>
+                    Estoy dando los primeros pasos en el desarrollo de software. Tengo un gran interés en aprender y
+                    crecer en este campo.
+                    Me atrae especialmente el desarrollo frontend de aplicaciones digitales, donde puedo combinar
+                    creatividad y tecnología para
+                    ofrecer experiencias visuales atractivas y fáciles de usar.
+                </p>
+                <p>
+                    Actualmente, tengo un conocimiento básico de varios lenguajes de programación y una comprensión
+                    básica de bases de datos,
+                    lo que me da una base sólida para seguir explorando más herramientas y tecnologías. Estoy por
+                    adquirir nuevas habilidades
+                    y contribuir a proyectos que me permitan aprender junto a profesionales con más experiencia.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <div class="row my-4 text-center">
+        <h3>Mis Proyectos</h3>
+        {% if projects %}
+            {% for project in projects %}
+                <div class="col-md-4 p-4 ">
+                    <div class="card bg-gradient card-project">
+                        <img src="{{ project.image.url }}" class="card-img-top img-size-portfolio"
+                             alt="{{ project.title }}"/>
+                        <div class="card-body ">
+                            <h2>{{ project.title }}</h2>
+                            <p>{{ project.description }}</p>
+                            {% if project.url %}
+                                <a href="{{ project.url }}" class="btn btn-light rounded-0 btn-sm " target="__blank"
+                                   rel="noreferrer">Visitar
+                                    el Proyecto</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No hay proyectos disponibles.</p>
+        {% endif %}
+    </div>
+
+    <div class="row my-4 text-center">
+        <h3>Mis Cursos</h3>
+        {% if cursos %}
+            {% for curso in cursos %}
+                <div class="col-md-4 p-4">
+                    <div class="card bg-gradient card-project">
+                        <div class="card-body">
+                            <h2>{{ curso.institucion_del_curso }}</h2>
+                            <p><strong>Descripción:</strong> {{ curso.descripcion_curso }}</p>
+                            <p><strong>Fecha:</strong> {{ curso.fecha_curso }}</p>
+                            <p><strong>Horas:</strong> {{ curso.numero_horas }} horas</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No hay cursos disponibles.</p>
+        {% endif %}
+    </div>
+    
+{% endblock %}

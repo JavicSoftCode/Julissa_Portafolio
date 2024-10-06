@@ -1,0 +1,108 @@
+/* Fondo con gradiente suave para un efecto moderno */
+.hero-section {
+    background: linear-gradient(135deg, #6f42c1, #9b59b6, #d1a3ff);
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border: none;
+}
+
+/* Texto principal con animación */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Retraso de animación para los párrafos */
+.fade-in-delayed {
+    opacity: 0;
+    animation: fadeIn 2.5s ease forwards;
+}
+
+.fade-in-more {
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo del subtítulo */
+.tagline {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Introducción con un diseño moderno */
+.intro {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+/* Botón mejorado */
+.btn-light {
+    background-color: #ffccff;
+    color: #6f42c1;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-light:hover {
+    background-color: #ffffff;
+    color: #9b59b6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de imagen de perfil con sombra personalizada */
+.profile-img img {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de sombra personalizada */
+.custom-shadow {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Alineación del contenido */
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.px-4 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo de transiciones suaves */
+.transition {
+    transition: all 0.3s ease-in-out;
+}

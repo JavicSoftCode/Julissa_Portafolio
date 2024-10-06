@@ -1,0 +1,37 @@
+{% extends 'home.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% block content %}
+    <main class="mainContent bg-gradient">
+        <div class="container">
+            <div class="row justify-content-center fade-in-more">
+                <div class="col-lg-12">
+                    <div class="card shadow-lg border-0 rounded-lg mt-5 bg-transparent">
+                        <div class="card-header bg-transparent text-center">
+                            <h3 class="text-white font-weight-bold my-1 h3">Iniciar Sesión</h3>
+                        </div>
+                        <div class="card-body bg-transparent">
+                            <form method="POST" action="{% url 'portafolio:signin' %}" class="fade-in-more">
+                                {% csrf_token %}
+                                {{ form.non_field_errors }}
+                                <div class="form-group">
+                                    {{ form.username.label_tag }}
+                                    {{ form.username }}
+                                    {{ form.username.errors }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.password.label_tag }}
+                                    {{ form.password }}
+                                    {{ form.password.errors }}
+                                </div>
+                                <div class="form-group mt-4 mb-0 text-center">
+                                    <button type="submit" class="btn btn-primary-gradient btn-block">Entrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

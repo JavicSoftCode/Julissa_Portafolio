@@ -1,0 +1,133 @@
+body {
+    /*background: linear-gradient(135deg, #6f42c1, #9b59b6, #d1a3ff);*/
+}
+
+/* Fondo morado bonito */
+.bg-purple {
+    background-color: #6f42c1; /* Color morado elegante */
+}
+
+/* Efecto hover en los enlaces */
+.nav-link {
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+/* Cambiar color y subrayado en hover */
+.nav-link:hover {
+    color: #ffccff; /* Color rosado suave al hacer hover */
+    border-bottom: 2px solid #ffccff;
+}
+
+/* Estilo de botón en dispositivos móviles */
+.navbar-toggler {
+    border: none;
+    background-color: #ffccff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%281,1,1,0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Para ajustar el espaciado y alineación */
+.navbar-nav .nav-item {
+    margin-left: 1rem;
+}
+
+/* Cambiar el color del texto de la marca */
+.navbar-brand {
+    color: #ffccff;
+}
+
+.navbar-brand:hover {
+    color: #ffffff;
+}
+
+/* Estilo del botón de cerrar sesión */
+.btn- {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+
+/* Gradiente para el fondo de los formularios */
+body {
+    background: linear-gradient(135deg, #6f42c1, #9b59b6, #d1a3ff);
+    min-height: 100vh;
+
+}
+
+/* Estilo de animaciones */
+.fade-in-more {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo de los formularios */
+.card {
+    background: rgba(0, 0, 0, 0.6); /* Fondo transparente con un toque oscuro */
+    border-radius: 15px;
+}
+
+/* Estilo de los botones */
+.btn-primary-gradient {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6, #d1a3ff);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-primary-gradient:hover {
+    background: linear-gradient(135deg, #6f42c1, #8e44ad);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de los campos de formulario */
+.form-group input {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Textos blancos */
+.text-white {
+    color: white !important;
+}
+
+/* Ajuste de espacios en la parte superior */
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.img-JSC{
+    height: 50%;
+    width: 50%;
+}
